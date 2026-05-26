@@ -1,0 +1,17 @@
+Policy,Num Agents,Total Generated,Total Fulfilled,Avg Wait (Fulfilled),Avg Wait (All),Norm Wait (All),Wait/MaxWait (All),% Wait (Fulfilled)
+Greedy,8.0,62.5,36.2,8.83,10.07,0.17,0.42,51.3
+Coop-Greedy,8.0,62.5,37.0,8.56,9.58,0.16,0.4,53.12
+MCTS-Expert,8.0,62.5,34.2,9.84,12.76,0.21,0.53,42.31
+OneAgentRollout-Expert,8.0,62.5,38.8,7.62,9.38,0.16,0.39,50.7
+MCTS-TeamReward-Expert,8.0,62.5,23.0,14.83,19.19,0.32,0.8,29.39
+OneAgentRollout-TeamReward-Expert,8.0,62.5,33.9,8.21,12.45,0.21,0.52,36.33
+Cent-MAPPO,8.0,62.5,36.5,7.69,9.93,0.17,0.42,45.64
+Ind-MAPPO,8.0,62.5,28.5,7.39,14.54,0.24,0.61,25.36
+BenchMARL-MAPPO,8.0,62.5,28.6,8.8,14.17,0.24,0.59,30.73
+BenchMARL-IPPO,8.0,62.5,35.9,8.27,11.14,0.19,0.47,44.0
+BenchMARL-MASAC,8.0,62.5,9.9,5.39,23.88,0.4,1.0,3.92
+BenchMARL-ISAC,8.0,62.5,22.3,7.66,17.35,0.29,0.73,15.95
+BenchMARL-QMIX,8.0,62.5,33.0,8.5,12.21,0.2,0.51,37.48
+BenchMARL-VDN,8.0,62.5,33.9,8.28,12.39,0.21,0.52,36.28
+BenchMARL-IQL,8.0,62.5,29.2,9.46,13.98,0.23,0.59,31.41
+RLlib-PPO,8.0,62.5,34.6,8.18,11.46,0.19,0.48,39.73
