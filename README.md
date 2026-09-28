@@ -43,7 +43,7 @@ Full per-policy results for every fleet size are in the evaluation CSVs and the 
 
 ## Repository contents
 
-- `MARL_for_Cab_Routing__3_%20(1).pdf`: defence slides with the full method and results
+- `MARL_for_Cab_Routing__3_ (1).pdf`: defence slides with the full method and results
 - `eval_3agents_10eps.csv`, `eval_5agents_10eps.csv`, `eval_8agents_10eps.csv`, `evaluation_metrics_parallel10.csv`: per-policy metrics at 3, 5, 8 and 10 cabs
 - `comparison.gif`, `oneagentrollout_demo2.gif` (and `.mp4` versions): episode animations, including all 16 policies side by side
 - `training_curves_all.*`, `episode_cost.*`, `episode_fulfillment.*`: training and per-episode plots (PNG and interactive HTML)
