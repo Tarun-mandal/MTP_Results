@@ -1,7 +1,7 @@
 # Multi-Agent Reinforcement Learning for Ride-Hailing Cab Routing
 
 **M.Tech thesis · Indian Institute of Technology Patna · 2026**<br>
-Tarun Mandal · Supervisor: Dr. Arijit Mondal · [LinkedIn](https://www.linkedin.com/in/tarun-mandal-86959b1a7) · [Defence slides (PDF)](MTech_Thesis_Defence_Slides.pdf)
+Tarun Mandal · Supervisor: Dr. Arijit Mondal · [LinkedIn](https://www.linkedin.com/in/tarun-mandal-86959b1a7) · [Defence slides (PDF)](MARL_for_Cab_Routing__3_%20(1).pdf)
 
 ## Problem statement
 
