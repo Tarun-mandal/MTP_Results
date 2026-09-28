@@ -11,7 +11,7 @@ Ride-hailing platforms must keep deciding where idle cabs should go while reques
 
 > Given a fleet of N cabs on an urban road network and ride requests that arrive stochastically at random pickup points every minute, choose each free cab's next action (wait, move to an adjacent intersection, or pick up a waiting rider) so that the fleet serves as many requests as possible with the lowest rider wait over a 60-minute horizon.
 
-Three things make this hard: each cab sees only its local surroundings, the joint action space grows exponentially with fleet size ($|V|^N$), and demand is bursty and stochastic. The thesis asks whether cabs can **learn** decentralized dispatch policies with multi-agent reinforcement learning (MARL) that compete with hand-designed heuristics and planners, and whether a policy trained on a small fleet still works on larger fleets **without retraining**.
+Three things make this hard: each cab sees only its local surroundings, the joint action space grows exponentially with fleet size ($|V|^N$), and demand is bursty and stochastic. The thesis asks whether cabs can **learn** decentralized routing policies with multi-agent reinforcement learning (MARL) that compete with hand-designed heuristics and planners, and whether a policy trained on a small fleet still works on larger fleets **without retraining**.
 
 **Setting:** the road graph of San Francisco's Financial District (about 109 intersections, from OpenStreetMap), with demand calibrated on real taxi GPS traces (Cabspotting). Busy cabs drive the shortest path to their drop-off.
 
@@ -27,7 +27,7 @@ Three things make this hard: each cab sees only its local surroundings, the join
 
 Sixteen policies from three families were benchmarked under one interface with paired-seed evaluation:
 
-- **Heuristics:** greedy and cooperative-greedy dispatch.
+- **Heuristics:** greedy and cooperative-greedy routing.
 - **Planners:** Monte Carlo tree search and one-agent-at-a-time rollout, with cooperative greedy as the base policy.
 - **Learning:** 10 MARL algorithms, including centralized- and independent-critic MAPPO implemented from scratch in PyTorch, alongside BenchMARL and RLlib baselines (IPPO, QMIX, VDN, MASAC and others).
 
@@ -36,7 +36,7 @@ Learned policies use centralized training with decentralized execution (CTDE) an
 ## Key results
 
 - **The centralized critic scales better.** The from-scratch centralized-critic MAPPO was the best learned policy on 5, 8 and 10 cabs after training only on 3, with 34% lower rider wait than its independent-critic counterpart at 10 cabs.
-- **Learning matched the heuristic; planning beat it.** The best learned policy matched greedy dispatch at every fleet size, while the rollout planner was best overall (21% lower wait than greedy at 10 cabs), at the cost of thousands of simulated rollouts per decision.
+- **Learning matched the heuristic; planning beat it.** The best learned policy matched greedy heuristic at every fleet size, while the rollout planner was best overall (21% lower wait than greedy at 10 cabs), at the cost of thousands of simulated rollouts per decision.
 - **Differences emerge with scale.** At the training size of 3 cabs, most methods were within noise of each other.
 
 Full per-policy results for every fleet size are in the evaluation CSVs and the defence slides.
